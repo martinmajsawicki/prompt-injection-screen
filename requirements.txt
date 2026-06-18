@@ -1,4 +1,4 @@
-PyMuPDF>=1.24       # warstwa 0: inspekcja glifów PDF (kolor, rozmiar, pozycja), metadane
-python-docx>=1.1    # warstwa 0: ukryte runy DOCX, metadane
-beautifulsoup4>=4.12 # warstwa 0: ukryty HTML (CSS, komentarze, alt/aria)
-# Warstwa 1 (OpenRouter) używa wyłącznie biblioteki standardowej (urllib) — bez dodatkowych zależności.
+PyMuPDF>=1.24       # Layer 0: PDF glyph inspection (color, size, position), metadata
+python-docx>=1.1    # Layer 0: hidden DOCX runs, metadata
+beautifulsoup4>=4.12 # Layer 0: hidden HTML (CSS, comments, alt/aria)
+# Layer 1 (OpenRouter) uses only the standard library (urllib) — no extra dependencies.
