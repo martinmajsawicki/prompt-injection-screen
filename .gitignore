@@ -1,0 +1,18 @@
+# Środowisko Pythona (maszynowe, duże) — odtwarzane z requirements.txt
+.venv/
+__pycache__/
+*.pyc
+
+# Pliki testowe są GENEROWANE przez tests/run_all.py — nie wersjonujemy
+tests/fixtures/
+
+# Odkażone kopie i wyniki skanów
+*.clean.md
+*.sanitized.md
+
+# Sekrety — NIGDY nie commituj klucza API (trzymany poza repo: env / ~/.claude/settings.json)
+.env
+*.key
+
+# System
+.DS_Store

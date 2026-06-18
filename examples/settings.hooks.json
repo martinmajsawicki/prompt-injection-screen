@@ -1,0 +1,35 @@
+{
+  "_komentarz": "Wklej sekcje 'PreToolUse' i 'PostToolUse' do swojego ~/.claude/settings.json (do obiektu 'hooks'). ZMIEN sciezki na swoja lokalizacje repo. Klucz API trzymaj w sekcji 'env' tego samego pliku albo w zmiennej srodowiskowej — NIE tutaj na sztywno w repo.",
+
+  "env": {
+    "OPENROUTER_API_KEY": "",
+    "OPENROUTER_MODEL": "anthropic/claude-haiku-4.5"
+  },
+
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Read",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "'/ABSOLUTNA/SCIEZKA/prompt-injection-screen/.venv/bin/python' '/ABSOLUTNA/SCIEZKA/prompt-injection-screen/hooks/screen-hook.py'",
+            "timeout": 45
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "WebFetch|WebSearch",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "'/ABSOLUTNA/SCIEZKA/prompt-injection-screen/.venv/bin/python' '/ABSOLUTNA/SCIEZKA/prompt-injection-screen/hooks/screen-hook.py'",
+            "timeout": 50
+          }
+        ]
+      }
+    ]
+  }
+}
