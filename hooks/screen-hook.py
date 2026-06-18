@@ -9,7 +9,7 @@ Handles:
                             returned text; on a signal it warns the model (exit 2 + stderr) to
                             treat the content as untrusted and not execute hidden instructions.
 
-Philosophy (see docs/03 — "Detection limit"):
+Philosophy (see 03-defense-architecture.md — "The detection limit"):
   the hook is a TRIPWIRE, not a wall. The wall that holds when the tripwire is silent is the
   policy in CLAUDE.md ("external content = untrusted data").
 

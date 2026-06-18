@@ -107,7 +107,7 @@ For agents reading this repo, start with [`AGENTS.md`](AGENTS.md).
 - Layer 0 cannot catch **visible** prose with no hiding mechanic — that's Layer 1's job, and Layer 1 needs an API key.
 - The visible-exfiltration detector is **precise in Polish** (imperative vs infinitive are distinct words) but **noisier in English** (`send` is ambiguous). By design it is tuned for **high recall** — it would rather flag too often than miss.
 - Text drawn outside a PDF's MediaBox (rare) may escape extraction.
-- Tool output, the Layer-1 prompt and hook messages are in **English**; the detector also handles Polish content (detection patterns are bilingual). The deeper design docs (`01`–`05`) remain in Polish as background.
+- Everything is in **English** — output, prompts, docs. Detection patterns are bilingual (EN + PL), so the detector also catches Polish content.
 
 ## Repository layout
 
@@ -118,7 +118,11 @@ tests/run_all.py         # Layer-0 regression: generates a fixture per condition
 examples/                # SKILL.md + a settings.json hooks snippet (placeholder paths)
 SETUP.md                 # step-by-step install (human-readable AND agent-executable)
 AGENTS.md                # how AI agents should use this repo + roadmap / what's missing
-01..05*.md, ZRODLA.md    # design rationale and sources (in Polish — background reading)
+01-the-threat.md         # the threat and hiding techniques
+02-what-experts-say.md   # OWASP / Anthropic / DeepMind / papers
+03-defense-architecture.md  # the three layers, the detection limit, rationale
+04-screening-prompts.md  # ready-made prompt wording (Form A/B/C) + JSON schema
+05-usage.md, SOURCES.md  # operational guide and sources
 ```
 
 ## License

@@ -2,7 +2,7 @@
 """
 scan.py — screen files/content for hidden prompt injection.
 
-Architecture (see docs/03 — Polish design notes):
+Architecture (see 03-defense-architecture.md):
   Layer 0  — deterministic scan of HIDING MECHANICS (no LLM, cannot be injected):
              zero-width / Unicode-tag / bidi chars, white & tiny text in PDFs,
              off-page text, hidden DOCX runs, hidden HTML, metadata.

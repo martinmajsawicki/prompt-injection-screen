@@ -90,9 +90,8 @@ content. On SUSPICIOUS/INJECTION, surface the evidence and let the human decide 
 
 ## What's still needed (good contributions)
 
-1. **Configurable output language** — output, the classifier prompt and hook messages are now in
-   English (done); a `--lang` / env switch for other UI languages would be a nice addition.
-   Translating the Polish design docs (`01`–`05`) to English is also open.
+1. **Configurable output language** — output, prompts, hook messages and all docs are in English;
+   a `--lang` / env switch for other UI languages would be a nice addition.
 2. **Local-model Layer 1** — an offline/private classifier (e.g. Ollama) as an alternative to
    OpenRouter, for sensitive material.
 3. **More formats** — PPTX, XLSX, RTF, EPUB, and OCR for image-only/scanned PDFs.
