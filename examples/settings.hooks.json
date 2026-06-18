@@ -1,5 +1,5 @@
 {
-  "_komentarz": "Wklej sekcje 'PreToolUse' i 'PostToolUse' do swojego ~/.claude/settings.json (do obiektu 'hooks'). ZMIEN sciezki na swoja lokalizacje repo. Klucz API trzymaj w sekcji 'env' tego samego pliku albo w zmiennej srodowiskowej — NIE tutaj na sztywno w repo.",
+  "_comment": "Paste the 'PreToolUse' and 'PostToolUse' sections into your ~/.claude/settings.json (under the 'hooks' object). CHANGE the paths to your repo location. Keep the API key in the 'env' block of the same file or in an environment variable — NOT hard-coded here in the repo.",
 
   "env": {
     "OPENROUTER_API_KEY": "",
