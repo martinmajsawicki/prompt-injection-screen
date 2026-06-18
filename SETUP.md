@@ -56,7 +56,7 @@ Example `~/.claude/settings.json` snippet (works for CLI **and** desktop):
 ## 5. Verify it works
 
 ```bash
-./.venv/bin/python tests/run_all.py        # expect: WYNIK: 31/31 przeszło
+./.venv/bin/python tests/run_all.py        # expect: RESULT: 31/31 passed
 ```
 Then a real scan (if you set a key, this exercises Layer 1 too):
 ```bash

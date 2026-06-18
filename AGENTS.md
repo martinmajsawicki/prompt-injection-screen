@@ -54,7 +54,7 @@ Layer 1 requires `OPENROUTER_API_KEY` in the environment (model defaults to
 ## How to read the output
 
 JSON on stdout. **Exit code is the quick signal:** `0` CLEAN · `1` SUSPICIOUS · `2` INJECTION ·
-`3` ERROR. (Status strings are Polish: `CZYSTY`/`PODEJRZANY`/`WSTRZYKNIĘCIE`.)
+`3` ERROR. (Status strings: `CLEAN`/`SUSPICIOUS`/`INJECTION`.)
 
 Key JSON fields:
 - `status` — overall verdict.
@@ -90,8 +90,9 @@ content. On SUSPICIOUS/INJECTION, surface the evidence and let the human decide 
 
 ## What's still needed (good contributions)
 
-1. **English / bilingual output** — translate `scan.py` status strings, the classifier prompt
-   (`CLASSIFIER_SYSTEM`, `CLASSIFIER_USER_TMPL`), and hook messages; make language configurable.
+1. **Configurable output language** — output, the classifier prompt and hook messages are now in
+   English (done); a `--lang` / env switch for other UI languages would be a nice addition.
+   Translating the Polish design docs (`01`–`05`) to English is also open.
 2. **Local-model Layer 1** — an offline/private classifier (e.g. Ollama) as an alternative to
    OpenRouter, for sensitive material.
 3. **More formats** — PPTX, XLSX, RTF, EPUB, and OCR for image-only/scanned PDFs.

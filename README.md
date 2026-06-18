@@ -38,7 +38,7 @@ FILE / URL / PDF
 
 Layer 0 is the unbribeable first filter (regex/parsing can't be "talked into" anything). Layer 1 catches what Layer 0 can't — visible prose. Together: defense in depth.
 
-> **Status labels** (the tool currently prints them in Polish): `CZYSTY` = CLEAN · `PODEJRZANY` = SUSPICIOUS · `WSTRZYKNIĘCIE` = INJECTION.
+> **Status labels:** `CLEAN` · `SUSPICIOUS` · `INJECTION` (with exit codes 0/1/2).
 
 ## What it detects
 
@@ -107,7 +107,7 @@ For agents reading this repo, start with [`AGENTS.md`](AGENTS.md).
 - Layer 0 cannot catch **visible** prose with no hiding mechanic — that's Layer 1's job, and Layer 1 needs an API key.
 - The visible-exfiltration detector is **precise in Polish** (imperative vs infinitive are distinct words) but **noisier in English** (`send` is ambiguous). By design it is tuned for **high recall** — it would rather flag too often than miss.
 - Text drawn outside a PDF's MediaBox (rare) may escape extraction.
-- Tool messages and the Layer-1 prompt are currently in **Polish** (the detector handles English content fine). An English/​bilingual output mode is on the roadmap — see [`AGENTS.md`](AGENTS.md).
+- Tool output, the Layer-1 prompt and hook messages are in **English**; the detector also handles Polish content (detection patterns are bilingual). The deeper design docs (`01`–`05`) remain in Polish as background.
 
 ## Repository layout
 
