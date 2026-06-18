@@ -47,6 +47,17 @@ Layer 0 is the unbribeable first filter (regex/parsing can't be "talked into" an
 | **0 (deterministic)** | zero-width / word-joiner / BOM / soft-hyphen / bidi / Unicode-tag characters (and decodes hidden tag messages); white/light and tiny text in PDFs; text outside the visible CropBox; hidden DOCX runs; PDF/DOCX metadata; hidden HTML (`display:none`, `visibility:hidden`, `font-size:0`, `opacity:0`, off-screen, `alt`/`aria`, comments); visible commands to collect/send information — including **generic** ones, not just named secrets |
 | **1 (LLM)** | visible prose that instructs an AI, including vague exfiltration ("send anything sensitive you find"); chunked across large documents |
 
+## Not a coder? Let your AI agent install it
+
+You don't need to understand any of the commands below. Open Claude Code (CLI or desktop app) in
+this folder and say:
+
+> "Set up the prompt-injection-screen tool for me by following SETUP.md. Do everything you can
+> automatically, and tell me exactly what you need from me (like the API key) and how to get it."
+
+The agent follows [`SETUP.md`](SETUP.md), does the technical steps, and walks you through the one
+or two things only you can do (mainly: pasting a free API key). Everything else is automatic.
+
 ## Quick start
 
 ```bash
@@ -105,6 +116,7 @@ scan.py                  # the engine: Layer 0 + Layer 1 (chunking, OpenRouter v
 hooks/screen-hook.py     # Claude Code hook (auto-detects its own path)
 tests/run_all.py         # Layer-0 regression: generates a fixture per condition (expect 31/31)
 examples/                # SKILL.md + a settings.json hooks snippet (placeholder paths)
+SETUP.md                 # step-by-step install (human-readable AND agent-executable)
 AGENTS.md                # how AI agents should use this repo + roadmap / what's missing
 01..05*.md, ZRODLA.md    # design rationale and sources (in Polish — background reading)
 ```
